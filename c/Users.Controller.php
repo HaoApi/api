@@ -5,6 +5,11 @@ class UsersController extends BaseController {
 		//$this->get('参数名');
 		
 
+		$this->callback ( 200, '操作成功', $res );
+	
+	}
+	
+	public function test1() {
 		//调用模型
 		$uModel = $this->M ( 'Users' );
 		//调用模型方法
