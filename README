@@ -2,6 +2,20 @@
 需要开启rewrite重写功能
 需要支持.htaccess重写
 
+结构说明：
+	c 控制器层
+		Xxxx.Controller.php	文件命名 对应 类名->XxxxController 
+	config 配置层
+		config.route.php 路由配置
+	e 扩展层（插件层）
+		Xxxx.Ext.php 文件命名 对应 类名->XxxxExt
+	m 模型层（数据层）
+		Xxxx.Model.php 文件命名 对应 类名->XxxxModel
+	
+	index.php 入口（隐藏）
+	
+
+
 关于我
 一个小程序员，本着一切从简开发API接口，所以无聊的时候写的。希望对大家能有点用处
 
