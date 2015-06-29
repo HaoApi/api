@@ -26,7 +26,7 @@ function getMap($_c) {
 function Run($_c) {
 	$objectClass = getMap ( $_c );
 	if (! $objectClass) {
-		echo '{"errcode":9990,"errmsg":"未找到请求的数据"}';
+		echo '{"statusCode":9990,"message":"未找到请求的数据","result":""}';
 		exit ();
 	}
 	return new $objectClass ();
