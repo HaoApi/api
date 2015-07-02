@@ -10,14 +10,14 @@ include_once 'config/config.route.php';
 $_req = $_REQUEST;
 $_req = array_keys ( $_req );
 if (! isset ( $_req [0] )) {
-	echo "404 not found!";
+	echo '{"statusCode":404,"message":"您的请求错误","result":null}';
 	exit ();
 }
 $_req = explode ( "/", $_req [0] );
 array_shift ( $_req );
 
 if (! isset ( $_req [0] )) {
-	echo "404 not found!";
+	echo '{"statusCode":404,"message":"您的请求错误","result":null}';
 	exit ();
 }
 

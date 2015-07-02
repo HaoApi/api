@@ -36,7 +36,7 @@ function getMap($_c) {
 function Run($_c) {
 	$objectClass = getMap ( $_c );
 	if (! $objectClass) {
-		echo '{"statusCode":9990,"message":"未找到请求的数据","result":""}';
+		echo '{"statusCode":404,"message":"您的请求错误","result":null}';
 		exit ();
 	}
 	return new $objectClass ();
