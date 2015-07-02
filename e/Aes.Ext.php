@@ -7,7 +7,7 @@
  * @email 409328820@qq.com
  *
  */
-class AesExt
+final class AesExt
 {
     /**
      * 加密

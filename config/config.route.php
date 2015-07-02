@@ -1,16 +1,26 @@
 <?php
-//扩展层
-include_once 'e/Aes.Ext.php';
+/**
+ * 
+ * 自动引入 所需要的文件
+ * @param 文件夹名称 $files
+ * @param 文件的后缀名，默认*（全部） $flags
+ */
+function includeFile($files = null, $flags = '*') {
+	if (empty ( $files )) {
+		return null;
+	}
+	$_files = glob ( $files . '/*.' . $flags );
+	foreach ( $_files as $k => $v ) {
+		include_once $v;
+	}
+}
 
-//C层
-include_once 'c/Base.Controller.php';
-include_once 'c/Users.Controller.php';
-
-//Mysql底层操作必须引入
-include_once 'm/Mysql.Model.php';
-
-//M层
-include_once 'm/Users.Model.php';
+//引入m层
+includeFile ( 'm' );
+//引入c层
+includeFile ( 'c' );
+//引入e层
+includeFile ( 'e' );
 
 //得到路由关联的控制器
 function getMap($_c) {
