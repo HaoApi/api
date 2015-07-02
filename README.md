@@ -16,6 +16,7 @@ v1.0
 v1.1
 	更新自动引入c层 m层 e层文件
 	c层Base基类添加获取用户真实IP方法
+	e层添加	CURL操作类、随机字符串操作类
 	
 
 Author：Mr.Hao 
