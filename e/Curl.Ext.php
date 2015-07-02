@@ -40,7 +40,7 @@ final class CurlExt {
 	 * CURL POST方式请求
 	 * @param string $url
 	 * @param Array $data
-	 * @param array $header
+	 * @param array $header 删除头部array("Expect:");
 	 */
 	public static function getHttpPostRes($data, $url, $header = array()) {
 		$ch = curl_init ();
@@ -50,8 +50,10 @@ final class CurlExt {
 		curl_setopt ( $ch, CURLOPT_HEADER, 0 ); //定义是否显示状态头 1：显示 ； 0：不显示
 		curl_setopt ( $ch, CURLOPT_HTTPHEADER, $header ); //定义请求类型
 		curl_setopt ( $ch, CURLOPT_RETURNTRANSFER, true ); //定义是否直接输出返回流
-		curl_setopt ( $ch, CURLOPT_SSL_VERIFYPEER, false ); // 信任任何证书  
-		curl_setopt ( $ch, CURLOPT_SSL_VERIFYHOST, false ); // 检查证书中是否设置域名
+		if (strpos ( $url, 'https' ) === 0) {
+			curl_setopt ( $ch, CURLOPT_SSL_VERIFYPEER, false );
+			curl_setopt ( $ch, CURLOPT_SSL_VERIFYHOST, false );
+		}
 		curl_setopt ( $ch, CURLOPT_POSTFIELDS, $data ); //定义提交的数据
 		$response = curl_exec ( $ch ); //接收返回信息
 		if (curl_errno ( $ch )) { //出错则显示错误信息		
