@@ -18,6 +18,17 @@ v1.1<br>
 	c层Base基类添加获取用户真实IP方法<br>
 	e层添加	CURL操作类、随机字符串操作类<br>
 	
+v1.2<br>
+	更新BaseController 添加获取Aes加密串的值的方法<br>
+	修改Aes加密方法<br>
+	添加ImgStreamExt图片流上传<br>
+	添加TestController 提供两个方法 <br>
+	&nbsp;&nbsp;&nbsp;&nbsp;createAes 创建Aes加密url访问 <br>
+	&nbsp;&nbsp;&nbsp;&nbsp;testAes 解析Aes加密串<br>
+	Aes加密请求方式 http://xxx.com/配置的访问名称/要访问的具体方法/encryp/加密串<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;encryp 可修改 但必须保持生成与请求是一样的结构
+	&nbsp;&nbsp;&nbsp;&nbsp;加密串，见createAes方法
+	
 
 Author：Mr.Hao 
 Email: 409328820@qq.com

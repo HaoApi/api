@@ -82,6 +82,21 @@ class BaseController {
 	
 	/**
 	 * 
+	 * 获取Aes解密之后的key值
+	 * @param 解密之后的字符串 $str
+	 * @param 要取的key $key
+	 */
+	public function getAesKey($str = '', $key = '') {
+		parse_str ( $str, $strArr );
+		if (is_array ( $strArr )) {
+			return isset ( $strArr [$key] ) ? $strArr [$key] : $this->callback ( 9994, $key . '数据不能为空' );
+		} else {
+			$this->callback ( 9992, '未找到的解密串' );
+		}
+	}
+	
+	/**
+	 * 
 	 * 获取客户端真实IP
 	 */
 	protected function getClientIp() {

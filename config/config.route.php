@@ -27,7 +27,8 @@ function getMap($_c) {
 	
 	//配置用户访问的名称，及对应的控制器
 	$_map_controller = array (
-		'Users' => 'UsersController' 
+		'Users' => 'UsersController',
+		'Test' => 'TestController'
 	);
 	$objectClass = isset ( $_map_controller [$_c] ) ? $_map_controller [$_c] : null;
 	return $objectClass;
