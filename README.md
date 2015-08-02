@@ -26,9 +26,9 @@ v1.2<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;createAes 创建Aes加密url访问 <br>
 	&nbsp;&nbsp;&nbsp;&nbsp;testAes 解析Aes加密串<br>
 	Aes加密请求方式 http://xxx.com/配置的访问名称/要访问的具体方法/encryp/加密串<br>
-	&nbsp;&nbsp;&nbsp;&nbsp;encryp 可修改 但必须保持生成与请求是一样的结构
-	&nbsp;&nbsp;&nbsp;&nbsp;加密串，见createAes方法
+	&nbsp;&nbsp;&nbsp;&nbsp;encryp 可修改 但必须保持生成与请求是一样的结构<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;加密串，见createAes方法<br>
 	
-
-Author：Mr.Hao 
-Email: 409328820@qq.com
+<br><br>
+Author：Mr.Hao <br>
+Email: 409328820@qq.com<br>
